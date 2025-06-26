@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 const MessagesAPI = () => {
   const classes = useStyles();
 
-  const [formMessageTextData,] = useState({ token: '',number: '', body: '' })
+  const [formMessageTextData,] = useState({ token: '', number: '', body: '' })
   const [formMessageMediaData,] = useState({ token: '', number: '', medias: '' })
   const [file, setFile] = useState({})
 
@@ -53,17 +53,17 @@ const MessagesAPI = () => {
       },
       data
     };
-    
+
     axios.request(options).then(function (response) {
-      toast.success('Mensagem enviada com sucesso');
+      toast.success('Pesan enviada com sucesso');
     }).catch(function (error) {
       toastError(error);
-    });    
+    });
   }
 
-  const handleSendMediaMessage = async (values) => { 
+  const handleSendMediaMessage = async (values) => {
     try {
-      const firstFile =  file[0];
+      const firstFile = file[0];
       const data = new FormData();
       data.append('number', values.number);
       data.append('body', firstFile.name);
@@ -77,12 +77,12 @@ const MessagesAPI = () => {
         },
         data
       };
-      
+
       axios.request(options).then(function (response) {
-        toast.success('Mensagem enviada com sucesso');
+        toast.success('Pesan enviada com sucesso');
       }).catch(function (error) {
         toastError(error);
-      });      
+      });
     } catch (err) {
       toastError(err);
     }
@@ -146,18 +146,18 @@ const MessagesAPI = () => {
               </Grid>
               <Grid item xs={12} className={classes.textRight}>
                 <Button
-									type="submit"
-									color="primary"
-									variant="contained"
-									className={classes.btnWrapper}
-								>
-									{isSubmitting ? (
-										<CircularProgress
-											size={24}
-											className={classes.buttonProgress}
-										/>
-									) : 'Enviar'}
-								</Button>
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  className={classes.btnWrapper}
+                >
+                  {isSubmitting ? (
+                    <CircularProgress
+                      size={24}
+                      className={classes.buttonProgress}
+                    />
+                  ) : 'Kirim'}
+                </Button>
               </Grid>
             </Grid>
           </Form>
@@ -173,7 +173,7 @@ const MessagesAPI = () => {
         enableReinitialize={true}
         onSubmit={(values, actions) => {
           setTimeout(async () => {
-        
+
             await handleSendMediaMessage(values);
             actions.setSubmitting(false);
             actions.resetForm()
@@ -217,18 +217,18 @@ const MessagesAPI = () => {
               </Grid>
               <Grid item xs={12} className={classes.textRight}>
                 <Button
-									type="submit"
-									color="primary"
-									variant="contained"
-									className={classes.btnWrapper}
-								>
-									{isSubmitting ? (
-										<CircularProgress
-											size={24}
-											className={classes.buttonProgress}
-										/>
-									) : 'Enviar'}
-								</Button>
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  className={classes.btnWrapper}
+                >
+                  {isSubmitting ? (
+                    <CircularProgress
+                      size={24}
+                      className={classes.buttonProgress}
+                    />
+                  ) : 'Kirim'}
+                </Button>
               </Grid>
             </Grid>
           </Form>
@@ -238,91 +238,96 @@ const MessagesAPI = () => {
   }
 
   return (
-    <Paper
-      className={classes.mainPaper}
-      variant="outlined"
-    >
+    <Paper className={classes.mainPaper} variant="outlined">
       <Typography variant="h5">
-        Documentação para envio de mensagens
+        Dokumentasi Pengiriman Pesan
       </Typography>
+
       <Typography variant="h6" color="primary" className={classes.elementMargin}>
-        Métodos de Envio
+        Metode Pengiriman
       </Typography>
+
       <Typography component="div">
         <ol>
-          <li>Mensagens de Texto</li>
-          <li>Mensagens de Media</li>
+          <li>Pesan Teks</li>
+          <li>Pesan Media</li>
         </ol>
       </Typography>
+
       <Typography variant="h6" color="primary" className={classes.elementMargin}>
-        Instruções
+        Instruksi
       </Typography>
+
       <Typography className={classes.elementMargin} component="div">
-        <b>Observações importantes</b><br />
+        <b>Catatan Penting</b><br />
         <ul>
-          <li>Antes de enviar mensagens, é necessário o cadastro do token vinculado à conexão que enviará as mensagens. <br/>Para realizar o cadastro acesse o menu "Conexões", clique no botão editar da conexão e insira o token no devido campo.</li>
           <li>
-            O campo número aceita dois tipos de informação:
-              <ul>
-                <li><b>Número de Whatsapp:</b> Qualquer número de whatsapp completo iniciando pelo código do país (BR=55)</li>
-                <li><b>Whatsapp JID:</b> Qualquer identificador do Whatsapp, para grupos ele é um número extenso seguido de @g.us</li>
-              </ul>
+            Sebelum mengirim pesan, wajib mendaftarkan token yang terhubung dengan koneksi pengirim. <br />
+            Untuk melakukan pendaftaran, buka menu "Koneksi", klik tombol edit pada koneksi yang diinginkan dan masukkan token pada kolom yang tersedia.
+          </li>
+          <li>
+            Kolom nomor menerima dua jenis informasi:
+            <ul>
+              <li><b>Nomor WhatsApp:</b> Nomor WhatsApp lengkap yang dimulai dengan kode negara (contoh untuk BR: 55)</li>
+              <li><b>WhatsApp JID:</b> Identifier WhatsApp, untuk grup biasanya berupa angka panjang diikuti dengan @g.us</li>
+            </ul>
           </li>
         </ul>
       </Typography>
+
       <Typography variant="h6" color="primary" className={classes.elementMargin}>
-        1. Mensagens de Texto
+        1. Pesan Teks
       </Typography>
+
       <Grid container>
         <Grid item xs={12} sm={6}>
           <Typography className={classes.elementMargin} component="div">
-            <p>Seguem abaixo a lista de informações necessárias para envio das mensagens de texto:</p>
+            <p>Berikut ini adalah daftar informasi yang diperlukan untuk mengirim pesan teks:</p>
             <b>Endpoint: </b> {getEndpoint()} <br />
-            <b>Método: </b> POST <br />
-            <b>Headers: </b> Authorization ("Bearer " + token cadastrado) e Content-Type (application/json) <br />
-            <b>Body: </b> {"{ \"number\": \"558599999999\", \"body\": \"Sua mensagem\", \"saveOnTicket\": true, \"linkPreview\": true }"}
+            <b>Metode: </b> POST <br />
+            <b>Headers: </b> Authorization ("Bearer " + token yang telah didaftarkan) dan Content-Type (application/json) <br />
+            <b>Body: </b> {"{ \"number\": \"558599999999\", \"body\": \"Pesan Anda\", \"saveOnTicket\": true, \"linkPreview\": true }"}
           </Typography>
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <Typography className={classes.elementMargin}>
-            <b>Teste de Envio</b>
+            <b>Pengujian Pengiriman</b>
           </Typography>
           {renderFormMessageText()}
         </Grid>
       </Grid>
+
       <Typography variant="h6" color="primary" className={classes.elementMargin}>
-        2. Mensagens de Media
+        2. Pesan Media
       </Typography>
+
       <Grid container>
         <Grid item xs={12} sm={6}>
           <Typography className={classes.elementMargin} component="div">
-            <p>Seguem abaixo a lista de informações necessárias para envio das mensagens de texto:</p>
+            <p>Berikut ini adalah daftar informasi yang diperlukan untuk mengirim pesan media:</p>
             <b>Endpoint: </b> {getEndpoint()} <br />
-            <b>Método: </b> POST <br />
-            <b>Headers: </b> Authorization ("Bearer " + token cadastrado) e Content-Type (multipart/form-data) <br />
-            <b>FormData: </b> <br />
+            <b>Metode: </b> POST <br />
+            <b>Headers: </b> Authorization ("Bearer " + token yang telah didaftarkan) dan Content-Type (multipart/form-data) <br />
+            <b>FormData: </b>
             <ul>
-              <li>
-                <b>number: </b> 558599999999
-              </li>
-              <li>
-                <b>medias: </b> arquivo
-              </li>
-              <li>
-                <b>saveOnTicket: </b> true
-              </li>
+              <li><b>number: </b> 558599999999</li>
+              <li><b>medias: </b> file</li>
+              <li><b>saveOnTicket: </b> true</li>
             </ul>
           </Typography>
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <Typography className={classes.elementMargin}>
-            <b>Teste de Envio</b>
+            <b>Pengujian Pengiriman</b>
           </Typography>
           {renderFormMessageMedia()}
         </Grid>
       </Grid>
     </Paper>
   );
+
 };
 
 export default MessagesAPI;

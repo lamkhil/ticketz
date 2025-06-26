@@ -15,9 +15,9 @@ import { getBackendURL } from "./services/config";
 import Routes from "./routes";
 
 const queryClient = new QueryClient();
-const defaultLogoLight = "/vector/logo.svg";
-const defaultLogoDark = "/vector/logo-dark.svg";
-const defaultLogoFavicon = "/vector/favicon.svg";
+const defaultLogoLight = "/logo.png";
+const defaultLogoDark = "/logo.png";
+const defaultLogoFavicon = "/logo.png";
 
 const App = () => {
   const [locale, setLocale] = useState();
@@ -184,7 +184,7 @@ const App = () => {
     getPublicSetting("appLogoFavicon")
       .then((file) => { setAppLogoFavicon(file ? (`${getBackendURL()}/public/${file}`) : null) })
       .catch((error) => { console.log("Error reading setting", error); });
-    getPublicSetting("appName").then((name) => { setAppName(name || "ticketz") })
+    getPublicSetting("appName").then((name) => { setAppName(name || "Takon Sobat") })
       .catch((error) => { console.log("Error reading setting", error); setAppName("whitelabel chat") });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

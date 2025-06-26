@@ -277,7 +277,7 @@ const ContactListItems = () => {
           <>
             {i18n.t("contactListItems.confirmationModal.importMessage")}
             <a href={planilhaExemplo} download="planilha.xlsx">
-              Clique aqui para baixar planilha exemplo.
+              Klik di sini untuk mengunduh contoh lembar kerja..
             </a>
           </>
         )}

@@ -79,7 +79,7 @@ export function UsersFilter({ onFiltered, initialUsers, excludeId }) {
           <TextField
             {...params}
             variant="outlined"
-            placeholder="Filtro por Users"
+            placeholder="Filter berdasarkan Pengguna"
           />
         )}
       />

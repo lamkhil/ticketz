@@ -191,7 +191,7 @@ export function PlanManagerForm(props) {
                                 ) : null}
                                 <Grid xs={4} md={1} item>
                                     <ButtonWithSpinner className={classes.fullWidth} loading={loading} type="submit" variant="contained" color="primary">
-                                        Salvar
+                                        Simpan
                                     </ButtonWithSpinner>
                                 </Grid>
                             </Grid>
@@ -274,7 +274,7 @@ export default function PlansManager() {
             console.log(planList)
             setRecords(planList)
         } catch (e) {
-            toast.error('Não foi possível carregar a lista de registros')
+            toast.error('Tidak dapat memuat daftar data')
         }
         setLoading(false)
     }
@@ -299,9 +299,9 @@ export default function PlansManager() {
             }
             await loadPlans()
             handleCancel()
-            toast.success('Operação realizada com sucesso!')
+            toast.success('Operasi selesai dengan sukses!')
         } catch (e) {
-            toast.error('Não foi possível realizar a operação. Verifique se já existe uma plano com o mesmo nome ou se os campos foram preenchidos corretamente')
+            toast.error('Tidak dapat melakukan operasi. Periksa apakah sudah ada rencana dengan nama yang sama atau apakah kolom telah diisi dengan benar.')
         }
         setLoading(false)
     }
@@ -312,9 +312,9 @@ export default function PlansManager() {
             await remove(record.id)
             await loadPlans()
             handleCancel()
-            toast.success('Operação realizada com sucesso!')
+            toast.success('Operasi selesai dengan sukses!')
         } catch (e) {
-            toast.error('Não foi possível realizar a operação')
+            toast.error('Tidak dapat melakukan operasi')
         }
         setLoading(false)
     }
@@ -366,12 +366,12 @@ export default function PlansManager() {
                 </Grid>
             </Grid>
             <ConfirmationModal
-                title="Exclusão de Registro"
+                title="Penghapusan Pendaftaran"
                 open={showConfirmDialog}
                 onClose={() => setShowConfirmDialog(false)}
                 onConfirm={() => handleDelete()}
             >
-                Deseja realmente excluir esse registro?
+                Apakah Anda yakin ingin menghapus data ini?
             </ConfirmationModal>
         </Paper>
     )

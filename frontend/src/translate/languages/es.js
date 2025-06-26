@@ -6,7 +6,7 @@ const messages = {
         filter: "Filtrar",
         edit: "Editar",
         delete: "Eliminar",
-        cancel: "Cancelar",
+        cancel: "Batalkan",
         save: "Guardar",
         confirm: "Confirmar",
         close: "Cerrar",
@@ -173,7 +173,7 @@ const messages = {
         buttons: {
           okAdd: "Agregar",
           okEdit: "Guardar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         success: "WhatsApp guardado con éxito.",
       },
@@ -223,7 +223,7 @@ const messages = {
           addExtraInfo: "Agregar información",
           okAdd: "Agregar",
           okEdit: "Guardar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         success: "Contacto guardado con éxito.",
       },
@@ -245,7 +245,7 @@ const messages = {
         buttons: {
           okAdd: "Agregar",
           okEdit: "Guardar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
           attach: "Adjuntar archivo",
         },
         serviceHours: {
@@ -277,7 +277,7 @@ const messages = {
         buttons: {
           okAdd: "Agregar",
           okEdit: "Guardar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         success: "Usuario guardado con éxito.",
       },
@@ -296,7 +296,7 @@ const messages = {
         buttons: {
           okAdd: "Agregar",
           okEdit: "Guardar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         success: "Agendamiento guardado con éxito.",
       },
@@ -315,7 +315,7 @@ const messages = {
         buttons: {
           okAdd: "Agregar",
           okEdit: "Guardar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         success: "Etiqueta guardada con éxito.",
         successKanban: "Columna guardada con éxito.",
@@ -365,7 +365,7 @@ const messages = {
         noOptions: "Ningún usuario encontrado con ese nombre",
         buttons: {
           ok: "Transferir",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
       },
       ticketsList: {
@@ -384,7 +384,7 @@ const messages = {
         add: "Agregar",
         buttons: {
           ok: "Guardar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
       },
       mainDrawer: {
@@ -392,7 +392,7 @@ const messages = {
           dashboard: "Tablero",
           connections: "Conexiones",
           tickets: "Atenciones",
-          quickMessages: "Respuestas Rápidas",
+          quickMessages: "Respuestas Cepat",
           contacts: "Contactos",
           queues: "Filas y Chatbot",
           tags: "Etiquetas",
@@ -443,7 +443,7 @@ const messages = {
         noTickets: "Ninguna notificación.",
       },
       quickMessages: {
-        title: "Respuestas Rápidas",
+        title: "Respuestas Cepat",
         buttons: {
           add: "Nueva Respuesta",
         },
@@ -497,7 +497,7 @@ const messages = {
           okAdd: "Agregar",
           add: "Agregar",
           edit: "Editar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         confirmationModal: {
           deleteTitle: "Eliminar",
@@ -525,7 +525,7 @@ const messages = {
           okAdd: "Agregar",
           add: "Agregar",
           edit: "Editar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         table: {
           name: "Nombre",
@@ -588,7 +588,7 @@ const messages = {
             add: "Agregar",
             edit: "Actualizar",
             okadd: "Ok",
-            cancel: "Cancelar Disparos",
+            cancel: "Batalkan Disparos",
             restart: "Reiniciar Disparos",
             close: "Cerrar",
             attach: "Adjuntar Archivo",
@@ -614,7 +614,7 @@ const messages = {
         },
         table: {
           priority: "Prioridad",
-          title: "Título",
+          title: "Judul",
           text: "Texto",
           mediaName: "Archivo",
           status: "Estado",
@@ -627,7 +627,7 @@ const messages = {
           readonly: "Solo Lectura",
           form: {
             priority: "Prioridad",
-            title: "Título",
+            title: "Judul",
             text: "Texto",
             mediaPath: "Archivo",
             status: "Estado",
@@ -636,7 +636,7 @@ const messages = {
             add: "Agregar",
             edit: "Actualizar",
             okadd: "Ok",
-            cancel: "Cancelar",
+            cancel: "Batalkan",
             close: "Cerrar",
             attach: "Adjuntar Archivo",
           },
@@ -698,9 +698,9 @@ const messages = {
       },
       about: {
         aboutthe: "Acerca de",
-        copyright: "© 2024 - Funcionando com ticketz",
+        copyright: "© 2024 - Funcionando com Takon Sobat",
         buttonclose: "Cerrar",
-        title: "Acerca de ticketz",
+        title: "Acerca de Takon Sobat",
         abouttitle: "Origen y Mejoras",
         aboutdetail: "El ticketz es derivado indirecto del proyecto Whaticket con mejoras compartidas por los desarrolladores del sistema EquipeChat a través del canal VemFazer en YouTube, posteriormente mejorado por Claudemir Todo Bom.",
         aboutauthorsite: "Sitio del autor",
@@ -709,7 +709,7 @@ const messages = {
         licenseheading: "Licencia de Código Abierto",
         licensedetail: "El ticketz está licenciado bajo la Licencia Pública General Affero de GNU versión 3, lo que significa que cualquier usuario que tenga acceso a esta aplicación tiene derecho a obtener acceso al código fuente. Más información en los siguientes enlaces:",
         licensefulltext: "Texto completo de la licencia",
-        licensesourcecode: "Código fuente de ticketz"
+        licensesourcecode: "Código fuente de Takon Sobat"
       },
       schedules: {
         title: "Agendamentos",
@@ -853,7 +853,7 @@ const messages = {
           },
         },
         QuickMessages: {
-          title: "Respuestas rápidas",
+          title: "Respuestas Cepat",
           options: {
             enabled: "Por empresa",
             disabled: "Por Usuario",
@@ -955,7 +955,7 @@ const messages = {
       messagesInput: {
         placeholderOpen: "Ingrese un mensaje",
         placeholderClosed:
-          "Reabra o acepte este ticket para enviar un mensaje.",
+          "Reabra o acepte este ticket para Kirim un mensaje.",
         signMessage: "Firmar",
         replying: "Respondiendo",
         editing: "Editando",
@@ -988,19 +988,19 @@ const messages = {
         },
         buttons: {
           delete: "Eliminar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
       },
       confirmationModal: {
         buttons: {
           confirm: "Ok",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
       },
       messageOptionsMenu: {
         delete: "Eliminar",
         edit: "Editar",
-        forward: "Reenviar",
+        forward: "ReKirim",
         history: "Historial",
         reply: "Responder",
         confirmationModal: {
@@ -1022,7 +1022,7 @@ const messages = {
       privacyModal: {
         title: "Editar privacidad de Whatsapp",
         buttons: {
-          cancel: "Cancelar",
+          cancel: "Batalkan",
           okEdit: "Ahorrar",
         },
         form: {
@@ -1066,7 +1066,7 @@ const messages = {
         ERR_INVALID_CREDENTIALS:
           "Error de autenticación. Por favor, inténtelo de nuevo.",
         ERR_SENDING_WAPP_MSG:
-          "Error al enviar mensaje de WhatsApp. Verifique la página de conexiones.",
+          "Error al Kirim mensaje de WhatsApp. Verifique la página de conexiones.",
         ERR_DELETE_WAPP_MSG: "No se pudo eliminar el mensaje de WhatsApp.",
         ERR_EDITING_WAPP_MSG: "No se pudo editar el mensaje de WhatsApp.",
         ERR_OTHER_OPEN_TICKET: "Ya hay un ticket abierto para este contacto.",

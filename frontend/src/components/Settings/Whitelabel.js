@@ -22,7 +22,7 @@
 
 
 
-   INFORMAÇÕES BÁSICAS DE LICENÇA
+   INFORMAksi BÁSICAS DE LICENÇA
 
    Autor: Claudemir Todo Bom
    Email: claudemir@todobom.com
@@ -271,7 +271,7 @@ export default function Whitelabel(props) {
     <>
       <Grid spacing={3} container>
         {/* <Grid xs={12} item>
-                    <Title>Configurações Gerais</Title>
+                    <Title>Pengaturan Gerais</Title>
                 </Grid> */}
         <OnlyForSuperUser
           user={currentUser}
@@ -369,7 +369,7 @@ export default function Whitelabel(props) {
                     }}
                     onBlur={async (_) => {
                       await handleSaveSetting("appName",appName);
-                      colorMode.setAppName(appName || "ticketz");
+                      colorMode.setAppName(appName || "Takon Sobat");
                     }}
                   />
                 </FormControl>

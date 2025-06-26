@@ -73,7 +73,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
       };
       loadQueues();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleOption = (index) => async () => {
@@ -156,8 +156,8 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
       updateOptions();
     }
   };
-  
-  
+
+
   const handleEdition = (index) => {
     options[index].edition = !options[index].edition;
     updateOptions();
@@ -199,7 +199,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
       setAttachment(file);
     }
   };
-  
+
   const handleToggleExitChatbot = (event, index) => {
     options[index].exitChatbot = !options[index].exitChatbot;
     if (options[index].exitChatbot) {
@@ -231,14 +231,14 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
           >
             {i18n.t("queueModal.confirmationModal.deleteMessage")}
           </ConfirmationModal>
-              
+
           <TextField
             value={option.title}
             spellCheck={true}
             onChange={(event) => handleOptionChangeTitle(event, index)}
             size="small"
             className={classes.input}
-            placeholder="Título da opção"
+            placeholder="Judul opsi"
           />
           <div style={{ display: "none" }}>
             <input
@@ -273,27 +273,27 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
                   color="primary"
                   size="small"
                   className={classes.button}
-                    onClick={() => attachmentFile.current.click()}
-                  >
-                  <AttachFile/>
+                  onClick={() => attachmentFile.current.click()}
+                >
+                  <AttachFile />
                 </IconButton>
               )}
-               {(option.mediaPath || attachment) && (
-                    <Grid xs={12} item>
-                      <Button startIcon={<AttachFile />}>
-                        {attachment != null
-                          ? attachment.name
-                          : option.mediaName}
-                      </Button>
-                      
-                        <IconButton
-                          onClick={() => setConfirmationOpen(true)}
-                          color="secondary"
-                        >
-                          <DeleteOutline />
-                        </IconButton>
-                    </Grid>
-                  )}
+              {(option.mediaPath || attachment) && (
+                <Grid xs={12} item>
+                  <Button startIcon={<AttachFile />}>
+                    {attachment != null
+                      ? attachment.name
+                      : option.mediaName}
+                  </Button>
+
+                  <IconButton
+                    onClick={() => setConfirmationOpen(true)}
+                    color="secondary"
+                  >
+                    <DeleteOutline />
+                  </IconButton>
+                </Grid>
+              )}
             </>
           )}
         </>
@@ -302,7 +302,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
     return (
       <>
         <Typography>
-          {option.title !== "" ? option.title : "Título não definido"}
+          {option.title !== "" ? option.title : "Judul belum ditentukan"}
           <IconButton
             variant="outlined"
             size="small"
@@ -314,6 +314,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
         </Typography>
       </>
     );
+
   };
 
   const renderMessage = (index) => {
@@ -329,57 +330,54 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
             onChange={(event) => handleOptionChangeMessage(event, index)}
             size="small"
             className={classes.input}
-            placeholder="Digite o texto da opção"
+            placeholder="Ketik teks untuk opsi ini"
           />
 
           <Grid spacing={3} container>
-          <Grid className={classes.verticalCenter} xs={12} sm={12} md={3} item>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={option.exitChatbot}
-                  disabled={option.forwardQueueId && !option.exitChatbot}
-                  color="primary"
-                  onChange={(event) => handleToggleExitChatbot(event, index)}
-                  name="exitChatbot"
+            <Grid className={classes.verticalCenter} xs={12} sm={12} md={3} item>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={option.exitChatbot}
+                    disabled={option.forwardQueueId && !option.exitChatbot}
+                    color="primary"
+                    onChange={(event) => handleToggleExitChatbot(event, index)}
+                    name="exitChatbot"
+                    size="small"
+                  />
+                }
+                label="Keluar dari Chatbot"
+              />
+            </Grid>
+
+            <Grid xs={12} sm={12} md={3} item>
+              <FormControl className={classes.maxWidth}>
+                <InputLabel>
+                  Teruskan ke Antrian
+                </InputLabel>
+                <Select
+                  value={option.forwardQueueId}
+                  onChange={(event) => handleChangeForwardQueue(event.target.value, index)}
+                  label="Pilih antrian"
                   size="small"
-                />
-              }
-              label="Exit chatbot"
-            />
-          </Grid>
-
-          <Grid xs={12} sm={12} md={3} item>
-            <FormControl className={classes.maxWidth}>
-              <InputLabel>
-                Forward to Queue
-              </InputLabel>
-              <Select
-                value={option.forwardQueueId}
-                onChange={(event) => handleChangeForwardQueue(event.target.value, index)}
-                label="Select queue"
-                size="small"
-                disabled={option.exitChatbot && !option.forwardQueueId}
-              >
-                <MenuItem key="noqueue" value="">
-                  None
-                </MenuItem>
-                {queues.map((queue) => (
-                  <MenuItem key={queue.id} value={queue.id}>
-                    {queue.name}
+                  disabled={option.exitChatbot && !option.forwardQueueId}
+                >
+                  <MenuItem key="noqueue" value="">
+                    Tidak ada
                   </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+                  {queues.map((queue) => (
+                    <MenuItem key={queue.id} value={queue.id}>
+                      {queue.name}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Grid>
           </Grid>
-        </Grid>
-
-
-
-
         </>
       );
     }
+
     return (
       <>
         <Typography onClick={() => handleEdition(index)}>
@@ -388,6 +386,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
       </>
     );
   };
+
 
   const handleAddOption = (index) => {
     const optionNumber = options[index].children.length + 1;
@@ -422,7 +421,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
                 variant="outlined"
                 className={classes.addButton}
               >
-                Adicionar
+                Tambah
               </Button>
             </>
           )}
@@ -515,7 +514,7 @@ export function QueueOptions({ queueId }) {
     <div className={classes.root}>
       <br />
       <Typography>
-        Opções
+        Pilihan
         <Button
           color="primary"
           size="small"
@@ -524,7 +523,7 @@ export function QueueOptions({ queueId }) {
           style={{ marginLeft: 10 }}
           variant="outlined"
         >
-          Adicionar
+          Tambah
         </Button>
       </Typography>
       {renderStepper()}

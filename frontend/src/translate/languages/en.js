@@ -693,9 +693,9 @@ const messages = {
       },
       about: {
         aboutthe: "About the",
-        copyright: "© 2024 - Powered by ticketz",
+        copyright: "© 2024 - Powered by Takon Sobat",
         buttonclose: "Close",
-        title: "About ticketz",
+        title: "About Takon Sobat",
         abouttitle: "Origin and improvements",
         aboutdetail: "ticketz is indirectly derived from the Whaticket project with improvements shared by the developers of the EquipeChat system through the VemFazer channel on YouTube, later improved by Claudemir Todo Bom",
         aboutauthorsite: "Author's site",

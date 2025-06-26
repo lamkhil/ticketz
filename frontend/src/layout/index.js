@@ -418,11 +418,11 @@ const LoggedInLayout = ({ children, themeToggle }) => {
           >
              {greaterThenSm && user?.profile === "admin" && user?.company?.dueDate ? (
               <>
-                {i18n.t("settings.WelcomeGreeting.greetings")} <b>{user.name}</b>, {i18n.t("settings.WelcomeGreeting.welcome")} <b>{user?.company?.name}</b>! ({i18n.t("settings.WelcomeGreeting.expirationTime")} {dateToClient(user?.company?.dueDate)})
+                {i18n.t("settings.WelcomeGreeting.greetings")} <b>{user.name}</b>, Selamat datang di {theme.appName} 
               </>
             ) : (
               <>
-                {i18n.t("settings.WelcomeGreeting.greetings")} <b>{user.name}</b>, {i18n.t("settings.WelcomeGreeting.welcome")} <b>{user?.company?.name}</b>! ({i18n.t("settings.WelcomeGreeting.expirationTime")} {dateToClient(user?.company?.dueDate)})
+                {i18n.t("settings.WelcomeGreeting.greetings")} <b>{user.name}</b>, Selamat datang di {theme.appName} 
               </>
             )}
           </Typography>
@@ -516,7 +516,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
                 }
               </NestedMenuItem>
               <MenuItem onClick={handleOpenAboutModal}>
-                {i18n.t("about.aboutthe")} {currentUser?.super ? "ticketz" : theme.appName}
+                {i18n.t("about.aboutthe")} {currentUser?.super ? "Takon Sobat" : theme.appName}
               </MenuItem>
               <MenuItem onClick={handleClickLogout}>
                 {i18n.t("mainDrawer.appBar.user.logout")}

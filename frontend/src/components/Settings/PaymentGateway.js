@@ -22,7 +22,7 @@
 
 
 
-   INFORMAÇÕES BÁSICAS DE LICENÇA
+   INFORMAksi BÁSICAS DE LICENÇA
 
    Autor: Claudemir Todo Bom
    Email: claudemir@todobom.com

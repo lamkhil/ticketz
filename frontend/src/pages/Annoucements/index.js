@@ -304,7 +304,7 @@ const Announcements = () => {
                     {announcement.mediaName ?? "Sem anexo"}
                   </TableCell>
                   <TableCell align="center">
-                    {announcement.status ? "ativo" : "inativo"}
+                    {announcement.status ? "Aktif" : "Tidak Aktif"}
                   </TableCell>
                   <TableCell align="center">
                     <IconButton

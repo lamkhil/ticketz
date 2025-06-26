@@ -6,14 +6,14 @@ const messages = {
         filter: "Filtrar",
         edit: "Editar",
         delete: "Eliminar",
-        cancel: "Cancelar",
+        cancel: "Batalkan",
         save: "Guardar",
         confirm: "Confirmar",
-        close: "Fechar",
+        close: "Tutup",
         error: "Erro",
         success: "Sucesso",
-        actions: "Ações",
-        add: "Adicionar",
+        actions: "Aksi",
+        add: "Tambah",
         name: "Nome",
         email: "Email",
         phone: "Telefone",
@@ -91,7 +91,7 @@ const messages = {
             "Tem a certeza? Terá de ler o QR Code novamente.",
         },
         buttons: {
-          add: "Adicionar WhatsApp",
+          add: "Tambah WhatsApp",
           disconnect: "Desconectar",
           tryAgain: "Tentar novamente",
           qrcode: "QR CODE",
@@ -123,7 +123,7 @@ const messages = {
           status: "Estado",
           lastUpdate: "Última atualização",
           default: "Padrão",
-          actions: "Ações",
+          actions: "Aksi",
           session: "Sessão",
         },
       },
@@ -132,7 +132,7 @@ const messages = {
       },
       whatsappModal: {
         title: {
-          add: "Adicionar WhatsApp",
+          add: "Tambah WhatsApp",
           edit: "Editar WhatsApp",
         },
         form: {
@@ -140,9 +140,9 @@ const messages = {
           default: "Padrão",
         },
         buttons: {
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
+          okAdd: "Tambah",
+          okEdit: "Simpan",
+          cancel: "Batalkan",
         },
         success: "WhatsApp salvo com sucesso.",
       },
@@ -158,28 +158,28 @@ const messages = {
         confirmationModal: {
           deleteTitle: "Eliminar",
           importTitlte: "Importar contactos",
-          deleteMessage: "Interações relacionadas serão perdidas.",
+          deleteMessage: "InterAksi relacionadas serão perdidas.",
           importMessage: "Deseja importar todos os contactos do telefone?",
         },
         buttons: {
           import: "Importar Contactos",
-          add: "Adicionar Contacto",
+          add: "Tambah Contacto",
         },
         table: {
           name: "Nome",
           whatsapp: "WhatsApp",
           email: "Email",
-          actions: "Ações",
+          actions: "Aksi",
         },
       },
       contactModal: {
         title: {
-          add: "Adicionar contacto",
+          add: "Tambah contacto",
           edit: "Editar contacto",
         },
         form: {
           mainInfo: "Dados do contacto",
-          extraInfo: "Informações adicionais",
+          extraInfo: "InformAksi adicionais",
           name: "Nome",
           number: "Número do WhatsApp",
           email: "Email",
@@ -188,32 +188,32 @@ const messages = {
           disableBot: "Desativar chatbot",
         },
         buttons: {
-          addExtraInfo: "Adicionar informação",
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
+          addExtraInfo: "Tambah informação",
+          okAdd: "Tambah",
+          okEdit: "Simpan",
+          cancel: "Batalkan",
         },
         success: "Contacto salvo com sucesso.",
       },
       queueModal: {
         title: {
-          add: "Adicionar fila",
+          add: "Tambah fila",
           edit: "Editar fila",
         },
         form: {
           name: "Nome",
           color: "Cor",
-          greetingMessage: "Mensagem de saudação",
-          complationMessage: "Mensagem de conclusão",
-          outOfHoursMessage: "Mensagem fora de expediente",
-          ratingMessage: "Mensagem de avaliação",
-          transferMessage: "Mensagem de Transferência",
+          greetingMessage: "Pesan de saudação",
+          complationMessage: "Pesan de conclusão",
+          outOfHoursMessage: "Pesan fora de expediente",
+          ratingMessage: "Pesan de avaliação",
+          transferMessage: "Pesan de Transferência",
           token: "Token",
         },
         buttons: {
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
+          okAdd: "Tambah",
+          okEdit: "Simpan",
+          cancel: "Batalkan",
           attach: "Anexar Ficheiro",
         },
         serviceHours: {
@@ -233,7 +233,7 @@ const messages = {
       },
       userModal: {
         title: {
-          add: "Adicionar utilizador",
+          add: "Tambah utilizador",
           edit: "Editar utilizador",
         },
         form: {
@@ -243,9 +243,9 @@ const messages = {
           profile: "Perfil",
         },
         buttons: {
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
+          okAdd: "Tambah",
+          okEdit: "Simpan",
+          cancel: "Batalkan",
         },
         success: "Utilizador salvo com sucesso.",
       },
@@ -255,24 +255,24 @@ const messages = {
           edit: "Editar Agendamento",
         },
         form: {
-          body: "Mensagem",
+          body: "Pesan",
           contact: "Contacto",
           sendAt: "Data de Agendamento",
           sentAt: "Data de Envio",
-          saveMessage: "Salvar Mensagem no Ticket",
+          saveMessage: "Simpan Pesan no Ticket",
         },
         buttons: {
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
+          okAdd: "Tambah",
+          okEdit: "Simpan",
+          cancel: "Batalkan",
         },
         success: "Agendamento salvo com sucesso.",
       },
       tagModal: {
         title: {
-          add: "Nova Tag",
+          add: "Baru Tag",
           edit: "Editar Tag",
-          addKanban: "Nova Lane",
+          addKanban: "Baru Lane",
           editKanban: "Editar Lane",
         },
         form: {
@@ -281,9 +281,9 @@ const messages = {
           kanban: "Kanban",
         },
         buttons: {
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
+          okAdd: "Tambah",
+          okEdit: "Simpan",
+          cancel: "Batalkan",
         },
         success: "Tag salva com sucesso.",
         successKanban: "Lane salva com sucesso.",
@@ -310,7 +310,7 @@ const messages = {
           deleted: "O atendimento que estava a gerir foi eliminado.",
         },
         notification: {
-          message: "Mensagem de",
+          message: "Pesan de",
         },
         tabs: {
           open: { title: "Abertos" },
@@ -333,7 +333,7 @@ const messages = {
         noOptions: "Nenhum utilizador encontrado com esse nome",
         buttons: {
           ok: "Transferir",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
       },
       ticketsList: {
@@ -349,10 +349,10 @@ const messages = {
       newTicketModal: {
         title: "Criar Ticket",
         fieldLabel: "Digite para pesquisar o contacto",
-        add: "Adicionar",
+        add: "Tambah",
         buttons: {
-          ok: "Salvar",
-          cancel: "Cancelar",
+          ok: "Simpan",
+          cancel: "Batalkan",
         },
       },
       mainDrawer: {
@@ -360,19 +360,19 @@ const messages = {
           dashboard: "Dashboard",
           connections: "Conexões",
           tickets: "Atendimentos",
-          quickMessages: "Respostas Rápidas",
+          quickMessages: "Respostas Cepat",
           contacts: "Contactos",
           queues: "Filas & Chatbot",
           tags: "Tags",
           administration: "Administração",
           service: "Serviço",
           users: "Utilizadores",
-          settings: "Configurações",
+          settings: "Pengaturan",
           helps: "Ajuda",
           messagesAPI: "API",
           schedules: "Agendamentos",
           campaigns: "Campanhas",
-          annoucements: "Informativos",
+          annoucements: "InformAktifs",
           chats: "Chat Interno",
           financeiro: "Financeiro",
           logout: "Sair",
@@ -398,7 +398,7 @@ const messages = {
         title: "API",
         textMessage: {
           number: "Número",
-          body: "Mensagem",
+          body: "Pesan",
           token: "Token registado",
         },
         mediaMessage: {
@@ -412,12 +412,12 @@ const messages = {
         noTickets: "Nenhuma notificação.",
       },
       quickMessages: {
-        title: "Respostas Rápidas",
+        title: "Respostas Cepat",
         buttons: {
-          add: "Nova Resposta",
+          add: "Baru Resposta",
         },
         dialog: {
-          shortcode: "Atalho",
+          shortcode: "Pintasan",
           message: "Resposta",
         },
       },
@@ -440,10 +440,10 @@ const messages = {
           name: "Nome",
           color: "Cor",
           tickets: "Tickets",
-          actions: "Ações",
+          actions: "Aksi",
         },
         buttons: {
-          add: "Nova Lane",
+          add: "Baru Lane",
         },
         toasts: {
           deleted: "Lane excluída com sucesso.",
@@ -454,19 +454,19 @@ const messages = {
         table: {
           name: "Nome",
           contacts: "Contactos",
-          actions: "Ações",
+          actions: "Aksi",
         },
         buttons: {
-          add: "Nova Lista",
+          add: "Baru Lista",
         },
         dialog: {
           name: "Nome",
           company: "Empresa",
           okEdit: "Editar",
-          okAdd: "Adicionar",
-          add: "Adicionar",
+          okAdd: "Tambah",
+          add: "Tambah",
           edit: "Editar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         confirmationModal: {
           deleteTitle: "Excluir",
@@ -491,17 +491,17 @@ const messages = {
           whatsapp: "WhatsApp",
           email: "Email",
           okEdit: "Editar",
-          okAdd: "Adicionar",
-          add: "Adicionar",
+          okAdd: "Tambah",
+          add: "Tambah",
           edit: "Editar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
         table: {
           name: "Nome",
           number: "Número",
           whatsapp: "WhatsApp",
           email: "Email",
-          actions: "Ações",
+          actions: "Aksi",
         },
         confirmationModal: {
           deleteTitle: "Excluir",
@@ -517,7 +517,7 @@ const messages = {
         title: "Campanhas",
         searchPlaceholder: "Pesquisa",
         buttons: {
-          add: "Nova Campanha",
+          add: "Baru Campanha",
           contactLists: "Listas de Contactos",
         },
         table: {
@@ -528,25 +528,25 @@ const messages = {
           scheduledAt: "Agendamento",
           completedAt: "Concluída",
           confirmation: "Confirmação",
-          actions: "Ações",
+          actions: "Aksi",
         },
         dialog: {
-          new: "Nova Campanha",
+          new: "Baru Campanha",
           update: "Editar Campanha",
           readonly: "Apenas Visualização",
           form: {
             name: "Nome",
-            message1: "Mensagem 1",
-            message2: "Mensagem 2",
-            message3: "Mensagem 3",
-            message4: "Mensagem 4",
-            message5: "Mensagem 5",
-            confirmationMessage1: "Mensagem de Confirmação 1",
-            confirmationMessage2: "Mensagem de Confirmação 2",
-            confirmationMessage3: "Mensagem de Confirmação 3",
-            confirmationMessage4: "Mensagem de Confirmação 4",
-            confirmationMessage5: "Mensagem de Confirmação 5",
-            messagePlaceholder: "Conteúdo da mensagem",
+            message1: "Pesan 1",
+            message2: "Pesan 2",
+            message3: "Pesan 3",
+            message4: "Pesan 4",
+            message5: "Pesan 5",
+            confirmationMessage1: "Pesan de Confirmação 1",
+            confirmationMessage2: "Pesan de Confirmação 2",
+            confirmationMessage3: "Pesan de Confirmação 3",
+            confirmationMessage4: "Pesan de Confirmação 4",
+            confirmationMessage5: "Pesan de Confirmação 5",
+            messagePlaceholder: "Konten da Pesan",
             whatsapp: "Conexão",
             status: "Estado",
             scheduledAt: "Agendamento",
@@ -554,12 +554,12 @@ const messages = {
             contactList: "Lista de Contactos",
           },
           buttons: {
-            add: "Adicionar",
+            add: "Tambah",
             edit: "Atualizar",
             okadd: "Ok",
-            cancel: "Cancelar Envios",
+            cancel: "Batalkan Envios",
             restart: "Reiniciar Envios",
-            close: "Fechar",
+            close: "Tutup",
             attach: "Anexar Ficheiro",
           },
         },
@@ -575,38 +575,38 @@ const messages = {
         },
       },
       announcements: {
-        title: "Informativos",
+        title: "InformAktifs",
         searchPlaceholder: "Pesquisa",
         buttons: {
-          add: "Novo Informativo",
-          contactLists: "Listas de Informativos",
+          add: "Novo InformAktif",
+          contactLists: "Listas de InformAktifs",
         },
         table: {
           priority: "Prioridade",
-          title: "Título",
+          title: "Judul",
           text: "Texto",
           mediaName: "Ficheiro",
           status: "Estado",
-          actions: "Ações",
+          actions: "Aksi",
         },
         dialog: {
-          edit: "Edição de Informativo",
-          add: "Novo Informativo",
-          update: "Editar Informativo",
+          edit: "Edição de InformAktif",
+          add: "Novo InformAktif",
+          update: "Editar InformAktif",
           readonly: "Apenas Visualização",
           form: {
             priority: "Prioridade",
-            title: "Título",
+            title: "Judul",
             text: "Texto",
             mediaPath: "Ficheiro",
             status: "Estado",
           },
           buttons: {
-            add: "Adicionar",
+            add: "Tambah",
             edit: "Atualizar",
             okadd: "Ok",
-            cancel: "Cancelar",
-            close: "Fechar",
+            cancel: "Batalkan",
+            close: "Tutup",
             attach: "Anexar Ficheiro",
           },
         },
@@ -620,18 +620,18 @@ const messages = {
         },
       },
       campaignsConfig: {
-        title: "Configurações de Campanhas",
+        title: "Pengaturan de Campanhas",
       },
       queues: {
         title: "Filas & Chatbot",
         table: {
           name: "Nome",
           color: "Cor",
-          greeting: "Mensagem de saudação",
-          actions: "Ações",
+          greeting: "Pesan de saudação",
+          actions: "Aksi",
         },
         buttons: {
-          add: "Adicionar fila",
+          add: "Tambah fila",
         },
         confirmationModal: {
           deleteTitle: "Eliminar",
@@ -648,10 +648,10 @@ const messages = {
           name: "Nome",
           email: "Email",
           profile: "Perfil",
-          actions: "Ações",
+          actions: "Aksi",
         },
         buttons: {
-          add: "Adicionar utilizador",
+          add: "Tambah utilizador",
         },
         toasts: {
           deleted: "Utilizador excluído com sucesso.",
@@ -667,18 +667,18 @@ const messages = {
       },
       about: {
         aboutthe: "Sobre o",
-        copyright: "© 2024 - Funcionando com ticketz",
-        buttonclose: "Fechar",
-        title: "Sobre o ticketz",
+        copyright: "© 2024 - Funcionando com Takon Sobat",
+        buttonclose: "Tutup",
+        title: "Sobre o Takon Sobat",
         abouttitle: "Origem e melhorias",
         aboutdetail: "O ticketz é derivado indireto do projeto Whaticket com melhorias compartilhadas pelos desenvolvedores do sistema EquipeChat através do canal VemFazer no YouTube, posteriormente melhoradas por Claudemir Todo Bom",
         aboutauthorsite: "Site do autor",
         aboutwhaticketsite: "Site do Whaticket Community no Github",
         aboutvemfazersite: "Site do canal Vem Fazer no Github",
         licenseheading: "Licença em Código Aberto",
-        licensedetail: "O ticketz está licenciado sob a GNU Affero General Public License versão 3, isso significa que qualquer utilizador que tiver acesso a esta aplicação tem o direito de obter acesso ao código fonte. Mais informações nos links abaixo:",
+        licensedetail: "O ticketz está licenciado sob a GNU Affero General Public License versão 3, isso significa que qualquer utilizador que tiver acesso a esta aplicação tem o direito de obter acesso ao código fonte. Mais informAksi nos links abaixo:",
         licensefulltext: "Texto completo da licença",
-        licensesourcecode: "Código fonte do ticketz",
+        licensesourcecode: "Código fonte do Takon Sobat",
       },
       schedules: {
         title: "Agendamentos",
@@ -688,11 +688,11 @@ const messages = {
         },
         table: {
           contact: "Contacto",
-          body: "Mensagem",
+          body: "Pesan",
           sendAt: "Data de Agendamento",
           sentAt: "Data de Envio",
           status: "Estado",
-          actions: "Ações",
+          actions: "Aksi",
         },
         buttons: {
           add: "Novo Agendamento",
@@ -711,12 +711,12 @@ const messages = {
           name: "Nome",
           color: "Cor",
           tickets: "Registros",
-          actions: "Ações",
+          actions: "Aksi",
           id: "Id",
           kanban: "Kanban",
         },
         buttons: {
-          add: "Nova Tag",
+          add: "Baru Tag",
         },
         toasts: {
           deleted: "Tag excluída com sucesso.",
@@ -732,8 +732,8 @@ const messages = {
           api: "API",
           serveradmin: "Administração do servidor",
         },
-        success: "Configurações salvas com sucesso.",
-        title: "Configurações",
+        success: "Pengaturan salvas com sucesso.",
+        title: "Pengaturan",
         settings: {
           userCreation: {
             name: "Criação de utilizador",
@@ -744,7 +744,7 @@ const messages = {
           },
         },
         validations: {
-          title: "Avaliações",
+          title: "AvaliAksi",
           options: {
             enabled: "Habilitado",
             disabled: "Desabilitado",
@@ -762,7 +762,7 @@ const messages = {
           title: "Ação fora do expediente",
           options: {
             pending: "Deixar como pendente",
-            closed: "Fechar ticket",
+            closed: "Tutup ticket",
           },
         },
         IgnoreGroupMessages: {
@@ -773,7 +773,7 @@ const messages = {
           },
         },
         soundGroupNotifications: {
-          title: "Notificações de som de grupo",
+          title: "NotificAksi de som de grupo",
           options: {
             enabled: "Ativado",
             disabled: "Desativado",
@@ -808,7 +808,7 @@ const messages = {
           },
         },
         QuickMessages: {
-          title: "Mensagens Rápidas",
+          title: "Mensagens Cepat",
           options: {
             enabled: "Por empresa",
             disabled: "Por Utilizador",
@@ -825,9 +825,9 @@ const messages = {
           title: "Limite de Download de ficheiros (MB)",
         },
         messageVisibility: {
-          title: "Visibilidade da mensagem",
+          title: "Visibilidade da Pesan",
           options: {
-            respectMessageQueue: "Respeitar fila da mensagem",
+            respectMessageQueue: "Respeitar fila da Pesan",
             respectTicketQueue: "Respeitar fila do ticket",
           },
         },
@@ -842,12 +842,12 @@ const messages = {
           title: "Carência após vencimento (dias)",
         },
         "ticketAcceptedMessage": {
-          "title": "Mensagem de ticket aceito",
-          "placeholder": "Digite sua mensagem de ticket aceito aqui"
+          "title": "Pesan de ticket aceito",
+          "placeholder": "Digite sua Pesan de ticket aceito aqui"
         },
         "transferMessage": {
-          "title": "Mensagem de transferência",
-          "placeholder": "Digite sua mensagem de transferência aqui"
+          "title": "Pesan de transferência",
+          "placeholder": "Digite sua Pesan de transferência aqui"
         },
         "mustacheVariables": {
           "title": "Variáveis disponíveis:"
@@ -855,10 +855,10 @@ const messages = {
         WelcomeGreeting: {
           greetings: "Olá",
           welcome: "Bem-vindo a",
-          expirationTime: "Ativo até",
+          expirationTime: "Aktif até",
         },
         Options: {
-          title: "Opções",
+          title: "Pilihan",
         },
         Companies: {
           title: "Empresas",
@@ -891,9 +891,9 @@ const messages = {
         },
       },
       messagesInput: {
-        placeholderOpen: "Digite uma mensagem",
+        placeholderOpen: "Digite uma Pesan",
         placeholderClosed:
-          "Reabra ou aceite este ticket para enviar uma mensagem.",
+          "Reabra ou aceite este ticket para Kirim uma Pesan.",
         signMessage: "Assinar",
         replying: "A responder",
         editing: "A editar",
@@ -906,15 +906,15 @@ const messages = {
         buttons: {
           edit: "Editar contacto",
         },
-        extraInfo: "Outras informações",
+        extraInfo: "Outras informAksi",
       },
       ticketOptionsMenu: {
         schedule: "Agendamento",
         delete: "Eliminar",
         transfer: "Transferir",
-        registerAppointment: "Observações do Contacto",
+        registerAppointment: "ObservAksi do Contacto",
         appointmentsModal: {
-          title: "Observações do Contacto",
+          title: "ObservAksi do Contacto",
           textarea: "Observação",
           placeholder: "Insira aqui a informação que deseja registar",
         },
@@ -925,13 +925,13 @@ const messages = {
         },
         buttons: {
           delete: "Eliminar",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
       },
       confirmationModal: {
         buttons: {
           confirm: "Ok",
-          cancel: "Cancelar",
+          cancel: "Batalkan",
         },
       },
       messageOptionsMenu: {
@@ -940,13 +940,13 @@ const messages = {
         history: "Histórico",
         reply: "Responder",
         confirmationModal: {
-          title: "Apagar mensagem?",
+          title: "Apagar Pesan?",
           message: "Esta ação não pode ser revertida.",
         },
       },
       messageHistoryModal: {
-        close: "Fechar",
-        title: "Histórico de edição da mensagem",
+        close: "Tutup",
+        title: "Histórico de edição da Pesan",
       },
       presence: {
         unavailable: "Indisponível",
@@ -958,8 +958,8 @@ const messages = {
       privacyModal: {
         title: "Editar Privacidade do WhatsApp",
         buttons: {
-          cancel: "Cancelar",
-          okEdit: "Salvar",
+          cancel: "Batalkan",
+          okEdit: "Simpan",
         },
         form: {
           menu: {
@@ -979,8 +979,8 @@ const messages = {
           status: "Para atualizar a privacidade dos estados",
           online: "Para atualizar a privacidade online",
           last: "Para atualizar a privacidade do Último Visto",
-          groupadd: "Para atualizar a privacidade de Adicionar a grupos",
-          calladd: "Para atualizar a privacidade de Adicionar a Chamadas",
+          groupadd: "Para atualizar a privacidade de Tambah a grupos",
+          calladd: "Para atualizar a privacidade de Tambah a Chamadas",
           disappearing: "Para atualizar o Modo de Desaparecimento Padrão",
         },
       },
@@ -1001,9 +1001,9 @@ const messages = {
         ERR_INVALID_CREDENTIALS:
           "Erro de autenticação. Por favor, tente novamente.",
         ERR_SENDING_WAPP_MSG:
-          "Erro ao enviar mensagem do WhatsApp. Verifique a página de conexões.",
-        ERR_DELETE_WAPP_MSG: "Não foi possível excluir a mensagem do WhatsApp.",
-        ERR_EDITING_WAPP_MSG: "Não foi possível editar a mensagem do WhatsApp.",
+          "Erro ao Kirim Pesan do WhatsApp. Verifique a página de conexões.",
+        ERR_DELETE_WAPP_MSG: "Não foi possível excluir a Pesan do WhatsApp.",
+        ERR_EDITING_WAPP_MSG: "Não foi possível editar a Pesan do WhatsApp.",
         ERR_OTHER_OPEN_TICKET: "Já existe um ticket aberto para este contacto.",
         ERR_SESSION_EXPIRED: "Sessão expirada. Por favor entre novamente.",
         ERR_USER_CREATION_DISABLED:
@@ -1015,14 +1015,14 @@ const messages = {
         ERR_NO_TICKET_FOUND: "Nenhum ticket encontrado com este ID.",
         ERR_NO_USER_FOUND: "Nenhum utilizador encontrado com este ID.",
         ERR_NO_WAPP_FOUND: "Nenhum WhatsApp encontrado com este ID.",
-        ERR_CREATING_MESSAGE: "Erro ao criar mensagem na base de dados.",
+        ERR_CREATING_MESSAGE: "Erro ao criar Pesan na base de dados.",
         ERR_CREATING_TICKET: "Erro ao criar ticket na base de dados.",
         ERR_FETCH_WAPP_MSG:
-          "Erro ao buscar a mensagem no WhatsApp, talvez ela seja muito antiga.",
+          "Erro ao buscar a Pesan no WhatsApp, talvez ela seja muito antiga.",
         ERR_QUEUE_COLOR_ALREADY_EXISTS:
           "Esta cor já está em uso, escolha outra.",
         ERR_WAPP_GREETING_REQUIRED:
-          "A mensagem de saudação é obrigatória quando há mais de uma fila.",
+          "A Pesan de saudação é obrigatória quando há mais de uma fila.",
         ERR_SUBSCRIPTION_CHECK_FAILED: "Assinatura inválida ou não encontrada",
         ERR_WAPP_NOT_FOUND: "Conexão indisponível",
         ERR_SUBSCRIPTION_EXPIRED: "Assinatura expirada",

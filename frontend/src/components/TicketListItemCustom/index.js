@@ -273,7 +273,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen, groupActionButtons }) => {
             />
           )}
           {ticket.status === "open" && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Tutup Percakapan">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -295,7 +295,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen, groupActionButtons }) => {
             </Tooltip>
           )}
           {profile === "admin" && (
-            <Tooltip title="Espiar Conversa">
+            <Tooltip title="Lihat Percakapan">
               <VisibilityIcon
                 onClick={(e) => {
                   e.stopPropagation();
@@ -370,7 +370,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen, groupActionButtons }) => {
             />
           )}
           {ticket.status === "pending" && (groupActionButtons || !ticket.isGroup) && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Tutup Percakapan">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -400,7 +400,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen, groupActionButtons }) => {
             </Tooltip>
           )}
           {ticket.status === "open" && (groupActionButtons || !ticket.isGroup) && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Tutup Percakapan">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -416,7 +416,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen, groupActionButtons }) => {
             </Tooltip>
           )}
           {ticket.status === "pending" && (groupActionButtons || !ticket.isGroup) && (
-            <Tooltip title="Aceitar Conversa">
+            <Tooltip title="Terima Percakapan">
               <DoneIcon
                 onClick={() => handleAcceptTicket(ticket.id)}
                 fontSize="small"
@@ -439,7 +439,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen, groupActionButtons }) => {
           )}
 
           {profile === "admin" && (groupActionButtons || !ticket.isGroup) && (
-            <Tooltip title="Espiar Conversa">
+            <Tooltip title="Lihat Percakapan">
               <VisibilityIcon
                 onClick={(e) => {
                   e.stopPropagation();

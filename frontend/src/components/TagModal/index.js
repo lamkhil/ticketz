@@ -64,10 +64,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const TagSchema = Yup.object().shape({
-	name: Yup.string()
-		.min(3, "Mensagem muito curta")
-		.required("Obrigatório")
+  name: Yup.string()
+    .min(3, "Nama terlalu pendek")
+    .required("Wajib diisi")
 });
+
 
 const TagModal = ({ open, onClose, tagId, reload, kanban }) => {
 	const classes = useStyles();

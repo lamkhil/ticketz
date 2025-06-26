@@ -41,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
     overflowY: "hidden",
     border: "1px solid rgba(0, 0, 0, 0.12)",
     backgroundImage: theme.mode === 'light' ? `url(${whatsBackground})` : `url(${whatsBackgroundDark})`,
-		backgroundPosition: 'center', 
-		backgroundSize: 'cover', 
-		backgroundRepeat: 'no-repeat', 
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
   },
   gridContainer: {
     flex: 1,
@@ -91,12 +91,12 @@ export function ChatModal({
   const handleSave = async () => {
     try {
       if (!title) {
-        alert("Por favor, preencha o título da conversa.");
+        alert("Silakan isi judul percakapan.");
         return;
       }
 
       if (!users || users.length === 0) {
-        alert("Por favor, selecione pelo menos um usuário.");
+        alert("Silakan pilih setidaknya satu pengguna.");
         return;
       }
 
@@ -113,8 +113,9 @@ export function ChatModal({
         handleLoadNewChat(data);
       }
       handleClose();
-    } catch (err) {}
-  };  
+    } catch (err) { }
+  };
+
 
   return (
     <Dialog
@@ -123,13 +124,13 @@ export function ChatModal({
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">Conversa</DialogTitle>
+      <DialogTitle id="alert-dialog-title">Percakapan</DialogTitle>
       <DialogContent>
         <Grid spacing={2} container>
           <Grid xs={12} style={{ padding: 18 }} item>
             <TextField
-              label="Título"
-              placeholder="Título"
+              label="Judul"
+              placeholder="Judul"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               variant="outlined"
@@ -148,10 +149,10 @@ export function ChatModal({
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} color="primary">
-          Fechar
+          Tutup
         </Button>
         <Button onClick={handleSave} color="primary" variant="contained">
-          Salvar
+          Simpan
         </Button>
       </DialogActions>
     </Dialog>
@@ -251,44 +252,44 @@ function Chat(props) {
     }
 
     const onCurrentChat = (data) => {
-        if (data.action === "new-message") {
-          setMessages((prev) => [...prev, data.newMessage]);
-          const changedChats = chats.map((chat) => {
-            if (chat.id === data.newMessage.chatId) {
-              return {
-                ...data.chat,
-              };
-            }
-            return chat;
-          });
-          setChats(changedChats);
-          scrollToBottomRef.current();
-        }
-
-        if (data.action === "update") {
-          const changedChats = chats.map((chat) => {
-            if (chat.id === data.chat.id) {
-              return {
-                ...data.chat,
-              };
-            }
-            return chat;
-          });
-          setChats(changedChats);
-          scrollToBottomRef.current();
-        }
+      if (data.action === "new-message") {
+        setMessages((prev) => [...prev, data.newMessage]);
+        const changedChats = chats.map((chat) => {
+          if (chat.id === data.newMessage.chatId) {
+            return {
+              ...data.chat,
+            };
+          }
+          return chat;
+        });
+        setChats(changedChats);
+        scrollToBottomRef.current();
       }
 
-    socket.on(`company-${companyId}-chat-user-${user.id}`, onChatUser); 
+      if (data.action === "update") {
+        const changedChats = chats.map((chat) => {
+          if (chat.id === data.chat.id) {
+            return {
+              ...data.chat,
+            };
+          }
+          return chat;
+        });
+        setChats(changedChats);
+        scrollToBottomRef.current();
+      }
+    }
+
+    socket.on(`company-${companyId}-chat-user-${user.id}`, onChatUser);
     socket.on(`company-${companyId}-chat`, onChat);
     if (isObject(currentChat) && has(currentChat, "id")) {
       socket.on(`company-${companyId}-chat-${currentChat.id}`, onCurrentChat);
     }
-        
+
     return () => {
       socket.disconnect();
     };
-    
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentChat, socketManager]);
 
@@ -298,7 +299,7 @@ function Chat(props) {
       setMessagesPage(1);
       setCurrentChat(chat);
       setTab(1);
-    } catch (err) {}
+    } catch (err) { }
   };
 
   const sendMessage = async (contentMessage) => {
@@ -307,14 +308,14 @@ function Chat(props) {
       await api.post(`/chats/${currentChat.id}/messages`, {
         message: contentMessage,
       });
-    } catch (err) {}
+    } catch (err) { }
     setLoading(false);
   };
 
   const deleteChat = async (chat) => {
     try {
       await api.delete(`/chats/${chat.id}`);
-    } catch (err) {}
+    } catch (err) { }
   };
 
   const findMessages = async (chatId) => {
@@ -326,7 +327,7 @@ function Chat(props) {
       setMessagesPage((prev) => prev + 1);
       setMessagesPageInfo(data);
       setMessages((prev) => [...data.records, ...prev]);
-    } catch (err) {}
+    } catch (err) { }
     setLoading(false);
   };
 
@@ -348,10 +349,10 @@ function Chat(props) {
   const renderGrid = () => {
     return (
       <>
-      <Title>{i18n.t("internalChat.title")}</Title>
-      <Grid className={classes.gridContainer} container>
-        <Grid className={classes.gridItem} md={3} item>
-         
+        <Title>{i18n.t("internalChat.title")}</Title>
+        <Grid className={classes.gridContainer} container>
+          <Grid className={classes.gridItem} md={3} item>
+
             <div className={classes.btnContainer}>
               <Button
                 onClick={() => {
@@ -361,36 +362,36 @@ function Chat(props) {
                 color="primary"
                 variant="contained"
               >
-                Nova
+                Baru
               </Button>
             </div>
-        
-          <ChatList
-            chats={chats}
-            pageInfo={chatsPageInfo}
-            loading={loading}
-            handleSelectChat={(chat) => selectChat(chat)}
-            handleDeleteChat={(chat) => deleteChat(chat)}
-            handleEditChat={() => {
-              setDialogType("edit");
-              setShowDialog(true);
-            }}
-          />
-        </Grid>
-        <Grid className={classes.gridItem} md={9} item>
-          {isObject(currentChat) && has(currentChat, "id") && (
-            <ChatMessages
-              chat={currentChat}
-              scrollToBottomRef={scrollToBottomRef}
-              pageInfo={messagesPageInfo}
-              messages={messages}
+
+            <ChatList
+              chats={chats}
+              pageInfo={chatsPageInfo}
               loading={loading}
-              handleSendMessage={sendMessage}
-              handleLoadMore={loadMoreMessages}
+              handleSelectChat={(chat) => selectChat(chat)}
+              handleDeleteChat={(chat) => deleteChat(chat)}
+              handleEditChat={() => {
+                setDialogType("edit");
+                setShowDialog(true);
+              }}
             />
-          )}
+          </Grid>
+          <Grid className={classes.gridItem} md={9} item>
+            {isObject(currentChat) && has(currentChat, "id") && (
+              <ChatMessages
+                chat={currentChat}
+                scrollToBottomRef={scrollToBottomRef}
+                pageInfo={messagesPageInfo}
+                messages={messages}
+                loading={loading}
+                handleSendMessage={sendMessage}
+                handleLoadMore={loadMoreMessages}
+              />
+            )}
+          </Grid>
         </Grid>
-      </Grid>
       </>
     );
   };

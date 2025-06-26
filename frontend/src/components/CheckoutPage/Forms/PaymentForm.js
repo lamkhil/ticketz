@@ -97,7 +97,7 @@ export default function Pricing(props) {
       await loadPlans(companiesList.planId);
     } catch (e) {
       console.log(e);
-      // toast.error("Não foi possível carregar a lista de registros");
+      // toast.error("Tidak dapat memuat daftar data");
     }
     setLoading(false);
   };
@@ -129,7 +129,7 @@ export default function Pricing(props) {
       setStoragePlans(plans);
     } catch (e) {
       console.log(e);
-      // toast.error("Não foi possível carregar a lista de registros");
+      // toast.error("Tidak dapat memuat daftar data");
     }
     setLoading(false);
   };

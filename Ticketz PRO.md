@@ -10,7 +10,7 @@ para uso próprio quanto para comercialização na modalidade SaaS Whitelabel.
 
 Para efetuar a assinatura basta instalar (ou atualizar) o sistema seguindo as instruções abaixo,
 após acessar com a conta admin@admin.com (senha padrão é 123456) basta entrar na
-tela **"Configurações"** e preencher o formulário para a assinatura utilizando
+tela **"Pengaturan"** e preencher o formulário para a assinatura utilizando
 cartão de crédito com recorrência automática.
 
 > Quem desejar pagar a assinatura utilizando PIX, Boleto ou outra modalidade suportada
@@ -41,7 +41,7 @@ curl -sSL get.ticke.tz | sudo bash -s -- -b pro hostname.example.com email@examp
 
 ## Atualizar o Ticketz OSS para o Ticketz PRO
 
-O mesmo comando pode atualizar tanto as instalações feitas pelo comando simplificado quanto as feitas
+O mesmo comando pode atualizar tanto as instalAksi feitas pelo comando simplificado quanto as feitas
 a partir do código fonte. É importante porém salientar que o Ticketz PRO não pode ser personalizado
 por não ser fornecido como código aberto.
 
@@ -52,7 +52,7 @@ por não ser fornecido como código aberto.
 curl -sSL update.ticke.tz | sudo bash -s pro
 ```
 
-## Atualizações Posteriores
+## AtualizAksi Posteriores
 
 Uma vez alterado para a versão PRO, o comando de atualização é o mesmo de sempre, sem nenhum parâmetro adicional
 

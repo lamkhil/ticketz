@@ -80,7 +80,7 @@ function QuickMessages(props) {
     try {
       await saveMessage(message);
       await loadingQuickMessages();
-      toast.success("Messagem adicionada com sucesso.");
+      toast.success("Pesan berhasil ditambahkan.");
     } catch (e) {
       toast.error(e);
     }
@@ -91,7 +91,7 @@ function QuickMessages(props) {
     try {
       await updateMessage(message);
       await loadingQuickMessages();
-      toast.success("Messagem atualizada com sucesso.");
+      toast.success("Pesan berhasil diperbarui.");
     } catch (e) {
       toast.error(e);
     }
@@ -102,7 +102,7 @@ function QuickMessages(props) {
     try {
       await deleteMessage(message.id);
       await loadingQuickMessages();
-      toast.success("Messagem excluída com sucesso.");
+      toast.success("Pesan berhasil dihapus.");
     } catch (e) {
       toast.error(e);
     }
@@ -138,14 +138,14 @@ function QuickMessages(props) {
         saveMessage={handleSave}
       />
       <ConfirmationModal
-        title="Excluir Registro"
+        title="Hapus Catatan"
         open={showOnDeleteDialog}
         onClose={setShowOnDeleteDialog}
         onConfirm={async () => {
           await handleDelete(messageSelected);
         }}
       >
-        Deseja realmente excluir este registro?
+       Apakah Anda yakin ingin menghapus rekaman ini?
       </ConfirmationModal>
     </MainContainer>
   );

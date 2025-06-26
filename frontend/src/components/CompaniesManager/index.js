@@ -405,7 +405,7 @@ export function CompanyForm(props) {
                       variant="contained"
                       color="primary"
                     >
-                      Salvar
+                      Simpan
                     </ButtonWithSpinner>
                   </Grid>
                 </Grid>
@@ -555,7 +555,7 @@ export default function CompaniesManager() {
       const companyList = await list();
       setRecords(companyList);
     } catch (e) {
-      toast.error("Não foi possível carregar a lista de registros");
+      toast.error("Tidak dapat memuat daftar data");
     }
     setLoading(false);
   };
@@ -570,10 +570,10 @@ export default function CompaniesManager() {
       }
       await loadPlans();
       handleCancel();
-      toast.success("Operação realizada com sucesso!");
+      toast.success("Operasi selesai dengan sukses!");
     } catch (e) {
       toast.error(
-        "Não foi possível realizar a operação. Verifique se já existe uma empresa com o mesmo nome ou se os campos foram preenchidos corretamente"
+        "Tidak dapat melakukan operasi. Periksa apakah sudah ada perusahaan dengan nama yang sama atau apakah kolom telah diisi dengan benar"
       );
     }
     setLoading(false);
@@ -585,9 +585,9 @@ export default function CompaniesManager() {
       await remove(record.id);
       await loadPlans();
       handleCancel();
-      toast.success("Operação realizada com sucesso!");
+      toast.success("Operasi selesai dengan sukses!");
     } catch (e) {
-      toast.error("Não foi possível realizar a operação");
+      toast.error("Tidak dapat melakukan operasi");
     }
     setLoading(false);
   };
@@ -661,20 +661,20 @@ export default function CompaniesManager() {
         </Grid>
       </Grid>
       <ConfirmationModal
-        title="Exclusão de Registro"
+        title="Penghapusan Pendaftaran"
         open={showConfirmDeleteDialog}
         onClose={() => setShowConfirmDeleteDialog(false)}
         onConfirm={() => handleDelete()}
       >
-        Deseja realmente excluir esse registro?
+        Apakah Anda yakin ingin menghapus rekaman ini?
       </ConfirmationModal>
       <ConfirmationModal
-        title="Acessar como"
+        title="Akses sebagai"
         open={showConfirmImpersonateDialog}
         onClose={() => setShowConfirmImpersonateDialog(false)}
         onConfirm={() => onImpersonate()}
       >
-        Deseja acessar o sistema como esta empresa?
+        Apakah Anda ingin mengakses sistem sebagai perusahaan ini?
       </ConfirmationModal>
     </Paper>
   );

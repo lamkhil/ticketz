@@ -200,11 +200,11 @@ const WhatsAppModal = ({ open, onClose, whatsAppId }) => {
                   />
                 </div>
                 <div>
-                 <Typography style={{fontSize: "11px"}}>
-                  {`Variaveis: ( {{ms}}=> Turno, 
-                  {{name}}=> Nome do contato, 
-                  {{protocol}}=> protocolo, {{hora}}=> hora )`}
-                 </Typography>
+                  <Typography style={{ fontSize: "11px" }}>
+                    {`Variabel: ( {{ms}} => Shift, 
+                    {{name}} => Nama kontak, 
+                    {{protocol}} => Protokol, {{hora}} => Jam )`}
+                  </Typography>
                 </div>
                 <div>
                   <Field

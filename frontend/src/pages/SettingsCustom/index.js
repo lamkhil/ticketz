@@ -167,11 +167,7 @@ const SettingsCustom = () => {
         >
           <Tab label={i18n.t("settings.Options.title")} value={"options"} />
           {schedulesEnabled && <Tab label={i18n.t("settings.schedules.title")} value={"schedules"} />}
-          {isSuper() ? <Tab label={i18n.t("settings.Companies.title")} value={"companies"} /> : null}
-          {isSuper() ? <Tab label={i18n.t("settings.Plans.title")} value={"plans"} /> : null}
-          {isSuper() ? <Tab label={i18n.t("settings.Help.title")} value={"helps"} /> : null}
           {isSuper() ? <Tab label={i18n.t("settings.Whitelabel.title")} value={"whitelabel"} /> : null}
-          {isSuper() ? <Tab label={i18n.t("settings.PaymentGateways.title")} value={"paymentGateway"} /> : null}
         </Tabs>
         <Paper className={classes.paper} elevation={0}>
           <TabPanel

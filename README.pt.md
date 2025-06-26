@@ -13,7 +13,7 @@ Source](https://github.com/canove/whaticket-community), publicado pelo
 desenvolvedor [Cassio Santos](https://github.com/canove) sob a licença permissiva
 MIT. Depois recebeu diversas melhorias por autores não identificados e foi
 comercializado diretamente entre desenvolvedores e usuários com fornecimento
-de código fonte, e de acordo com informações [deste vídeo acabou em algum momento
+de código fonte, e de acordo com informAksi [deste vídeo acabou em algum momento
 sendo vazado e publicado abertamente](https://www.youtube.com/watch?v=SX_cGD5RLkQ)
 
 Após algumas pesquisas foi ainda identificado que a primeira versão SaaS do
@@ -22,12 +22,12 @@ Whaticket foi criada pelo desenvolvedor [Wender Teixeira](https://github.com/w3n
 É praticamente impossível identificar e creditar os autores das melhorias, [o
 código publicado pelo canal Vem Fazer](https://github.com/vemfazer/whaticket-versao-03-12-canal-vem-fazer)
 não menciona licença alguma portanto estou presumindo que todos os autores
-estão tranquilos em manter estas alterações sob a mesma licença do projeto
+estão tranquilos em manter estas alterAksi sob a mesma licença do projeto
 original (MIT)
 
 ## Relicenciamento
 
-Como estou fazendo estas alterações e disponibilizando sem custo algum, desejo que
+Como estou fazendo estas alterAksi e disponibilizando sem custo algum, desejo que
 elas estejam disponíveis a todos, por isso estou optando por relicenciar sob a
 AGPL, que exige que todo usuário que tenha acesso ao sistema possa obter o
 código fonte.
@@ -35,14 +35,14 @@ código fonte.
 Por isso, se você utilizar diretamente esta versão, é
 **muito importante manter o link na tela "Sobre o Ticketz", que dá acesso ao repositório**. Se você desejar pode mover o link para o código fonte para outro lugar, mas ele deve ser facilmente acessível por qualquer usuário do sistema.
 
-Caso você faça alterações no código você deve alterar o link para um
-repositório ou outra forma de obter o código das suas alterações.
+Caso você faça alterAksi no código você deve alterar o link para um
+repositório ou outra forma de obter o código das suas alterAksi.
 
 Se você deseja utilizar partes do código para corrigir algum código **para seu próprio em uso**, fique a vontade e não precisa se preocupar com a licença AGPL, Porém se você deseja utilizar qualquer parte adicionada nesse projeto em um sistema que você comercializa, ou você deve fornecer o código de todo o seu sistema ao usuários dele ou você deve contatar o autor do código para licenciar ele sob critérios diferentes.
 
 ## Objetivo
 
-Este projeto tem por objetivo melhorar e manter abertas as atualizações sobre o Whaticket
+Este projeto tem por objetivo melhorar e manter abertas as atualizAksi sobre o Whaticket
 SaaS publicado. Principalmente direcionadas à qualidade da aplicação e à
 facilidade de instalação e utilização.
 
@@ -106,7 +106,7 @@ Após isso, você pode obter um relatório completo de logs com o seguinte coman
 docker compose logs -t
 ```
 
-Se você quiser "seguir" os logs em tempo real, basta adicionar um parâmetro `-f` a esse comando:
+Se você quiser "seguir" os logs em tempo real, basta Tambah um parâmetro `-f` a esse comando:
 
 ```bash
 docker compose logs -t -f

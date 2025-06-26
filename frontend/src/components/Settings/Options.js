@@ -634,7 +634,7 @@ export default function Options(props) {
                 handleSetting("noQueueTimeoutAction", e.target.value, setNoQueueTimeoutAction);
               }}
             >
-              <MenuItem value={"0"}>Fechar</MenuItem>
+              <MenuItem value={"0"}>Tutup</MenuItem>
               {queues.map((queue) => (
                 <MenuItem key={queue.id} value={queue.id}>
                   Transferir para {queue.name}
@@ -677,7 +677,7 @@ export default function Options(props) {
               }}
             >
               <MenuItem value={"pending"}>Retornar para a fila</MenuItem>
-              <MenuItem value={"closed"}>Fechar atendimento</MenuItem>
+              <MenuItem value={"closed"}>Tutup atendimento</MenuItem>
             </Select>
           </FormControl>
         </Grid>

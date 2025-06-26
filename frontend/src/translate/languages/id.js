@@ -702,9 +702,9 @@ const messages = {
       },
       about: {
         aboutthe: "Tentang",
-        copyright: "� 2024 - Didukung oleh ticketz",
+        copyright: "� 2024 - Didukung oleh Takon Sobat",
         buttonclose: "Tutup",
-        title: "Tentang ticketz",
+        title: "Tentang Takon Sobat",
         abouttitle: "Asal dan peningkatan",
         aboutdetail: "ticketz berasal secara tidak langsung dari proyek Whaticket dengan peningkatan yang dibagikan oleh para pengembang sistem EquipeChat melalui saluran VemFazer di YouTube, kemudian ditingkatkan oleh Claudemir Todo Bom",
         aboutauthorsite: "Situs penulis",
@@ -892,7 +892,7 @@ const messages = {
           "title": "Variabel yang tersedia:"
         },
         WelcomeGreeting: {
-          greetings: "halo",
+          greetings: "Halo",
           welcome: "selamat datang di",
           expirationTime: "Aktif sampai",
         },

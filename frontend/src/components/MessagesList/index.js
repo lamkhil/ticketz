@@ -1108,7 +1108,7 @@ const MessagesList = ({ ticket, ticketId, isGroup, markAsRead }) => {
               color="textPrimary"
               style={{ fontWeight: '700', color: '#2c9ce7' }}
             >
-              Conversar
+              Percakapan
             </Typography>
           </div>
         </div>
@@ -1381,8 +1381,7 @@ const MessagesList = ({ ticket, ticketId, isGroup, markAsRead }) => {
           )}
 
           <span>
-            Você tem 24h para responder após receber uma mensagem, de acordo
-            com as políticas do Facebook.
+            Anda memiliki waktu 24 jam untuk menanggapi setelah menerima pesan, sesuai dengan kebijakan Facebook.
           </span>
         </div>
       )}

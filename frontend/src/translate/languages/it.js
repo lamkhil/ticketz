@@ -663,9 +663,9 @@ const messages = {
       },
       about: {
         aboutthe: "Informazioni su",
-        copyright: "© 2024 - Funzionante con ticketz",
+        copyright: "© 2024 - Funzionante con Takon Sobat",
         buttonclose: "Chiudi",
-        title: "Informazioni su ticketz",
+        title: "Informazioni su Takon Sobat",
         abouttitle: "Origine e miglioramenti",
         aboutdetail: "Il ticketz è derivato indirettamente dal progetto Whaticket con miglioramenti condivisi dagli sviluppatori del sistema EquipeChat attraverso il canale VemFazer su YouTube, successivamente migliorati da Claudemir Todo Bom",
         aboutauthorsite: "Sito dell'autore",
@@ -674,7 +674,7 @@ const messages = {
         licenseheading: "Licenza Open Source",
         licensedetail: "Il ticketz è concesso in licenza sotto la GNU Affero General Public License versione 3, il che significa che qualsiasi utente che ha accesso a questa applicazione ha il diritto di ottenere l'accesso al codice sorgente. Maggiori informazioni nei link sottostanti:",
         licensefulltext: "Testo completo della licenza",
-        licensesourcecode: "Codice sorgente di ticketz",
+        licensesourcecode: "Codice sorgente di Takon Sobat",
       },
       schedules: {
         title: "Pianificazioni",

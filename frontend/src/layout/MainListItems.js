@@ -278,7 +278,7 @@ const MainListItems = (props) => {
             />
       <ListItemLink
         to="/todolist"
-        primary={i18n.t("Tarefas")}
+        primary={i18n.t("Tugas")}
         icon={<BorderColorIcon />}
       />
             <ListItemLink
@@ -309,11 +309,6 @@ const MainListItems = (props) => {
                   <ForumIcon />
                 </Badge>
               }
-            />
-            <ListItemLink
-              to="/helps"
-              primary={i18n.t("mainDrawer.listItems.helps")}
-              icon={<HelpOutlineIcon />}
             />
           </>
         </>
@@ -413,7 +408,7 @@ const MainListItems = (props) => {
                       <ListItemIcon>
                         <SettingsOutlinedIcon />
                       </ListItemIcon>
-                      <ListItemText primary="Configurações" />
+                      <ListItemText primary="Pengaturan" />
                     </ListItem>
                   </List>
                 </Collapse>
@@ -450,11 +445,6 @@ const MainListItems = (props) => {
               primary={i18n.t("mainDrawer.listItems.messagesAPI")}
               icon={<CodeRoundedIcon />}
             />
-             <ListItemLink
-                to="/financeiro"
-                primary={i18n.t("mainDrawer.listItems.financeiro")}
-                icon={<LocalAtmIcon />}
-              />
 
             <ListItemLink
               to="/settings"

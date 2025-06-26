@@ -54,13 +54,12 @@ const useStyles = makeStyles(theme => ({
 		minWidth: 120,
 	},
 }));
-
 const ScheduleSchema = Yup.object().shape({
 	body: Yup.string()
-		.min(5, "Mensagem muito curta")
-		.required("Obrigatório"),
-	contactId: Yup.number().required("Obrigatório"),
-	sendAt: Yup.string().required("Obrigatório"),
+		.min(5, "Pesan terlalu pendek, minimal 5 karakter")
+		.required("Pesan wajib diisi"),
+	contactId: Yup.number().required("Kontak wajib dipilih"),
+	sendAt: Yup.string().required("Waktu pengiriman wajib diisi"),
 	saveMessage: Yup.bool()
 });
 
@@ -101,9 +100,9 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 			try {
 				(async () => {
 					const { data: contactList } = await api.get('/contacts/list', { params: { companyId: companyId } });
-					let customList = contactList.map((c) => ({id: c.id, name: c.name}));
+					let customList = contactList.map((c) => ({ id: c.id, name: c.name }));
 					if (isArray(customList)) {
-						setContacts([{id: "", name: ""}, ...customList]);
+						setContacts([{ id: "", name: "" }, ...customList]);
 					}
 					if (contactId) {
 						setSchedule(prevState => {
@@ -166,7 +165,7 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 				scroll="paper"
 			>
 				<DialogTitle id="form-dialog-title">
-					{schedule.status === 'ERRO' ? 'Erro de Envio' : `Mensagem ${capitalize(schedule.status)}`}
+					{schedule.status === 'ERRO' ? 'Gagal Mengirim' : `Pesan ${capitalize(schedule.status)}`}
 				</DialogTitle>
 				<Formik
 					initialValues={schedule}
@@ -200,7 +199,7 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 											getOptionSelected={(option, value) => {
 												return value.id === option.id
 											}}
-											renderInput={(params) => <TextField {...params} variant="outlined" placeholder="Contato" />}
+											renderInput={(params) => <TextField {...params} variant="outlined" placeholder="Contact" />}
 										/>
 									</FormControl>
 								</div>
@@ -227,7 +226,7 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 										type="datetime-local"
 										name="sendAt"
 										InputLabelProps={{
-										  shrink: true,
+											shrink: true,
 										}}
 										error={touched.sendAt && Boolean(errors.sendAt)}
 										helperText={touched.sendAt && errors.sendAt}
@@ -235,23 +234,23 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 										fullWidth
 									/>
 								</div>
-                <div className={classes.multFieldLine}>
-                  <FormControlLabel
-                    label={i18n.t("scheduleModal.form.saveMessage")}
-                    labelPlacement="end"
-                    control={
-                      <Switch
-                        size="small"
-                        checked={values.saveMessage}
-                        onChange={() =>
-                          setSchedule({ ...values, saveMessage: !values.saveMessage })
-                        }
-                        name="saveMessage"
-                        color="primary"
-                      />
-                    }
-                  />
-                </div>
+								<div className={classes.multFieldLine}>
+									<FormControlLabel
+										label={i18n.t("scheduleModal.form.saveMessage")}
+										labelPlacement="end"
+										control={
+											<Switch
+												size="small"
+												checked={values.saveMessage}
+												onChange={() =>
+													setSchedule({ ...values, saveMessage: !values.saveMessage })
+												}
+												name="saveMessage"
+												color="primary"
+											/>
+										}
+									/>
+								</div>
 							</DialogContent>
 							<DialogActions>
 								<Button
@@ -262,7 +261,7 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 								>
 									{i18n.t("scheduleModal.buttons.cancel")}
 								</Button>
-								{ (schedule.sentAt === null || schedule.sentAt === "") && (
+								{(schedule.sentAt === null || schedule.sentAt === "") && (
 									<Button
 										type="submit"
 										color="primary"
