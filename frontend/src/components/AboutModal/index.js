@@ -57,23 +57,18 @@ const AboutModal = ({ open, onClose }) => {
   const [backendGitInfo, setBackendGitInfo] = useState(null);
   const theme = useTheme();
 
-
 	const handleClose = () => {
 		onClose();
 	};
 
   useEffect(() => {
-    getCurrentUserInfo().then(
-      (user) => {
-        setCurrentUser(user);
-      }
-    );
+    getCurrentUserInfo().then((user) => {
+      setCurrentUser(user);
+    });
 
-    api.get("/").then(
-      (response) => {
-        setBackendGitInfo(response.data);
-      }
-    )
+    api.get("/").then((response) => {
+      setBackendGitInfo(response.data);
+    });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -87,56 +82,49 @@ const AboutModal = ({ open, onClose }) => {
 				scroll="paper"
 			>
 				<DialogTitle id="form-dialog-title">
-					{i18n.t("about.aboutthe")} {currentUser?.super ? "Takon Sobat" : theme.appName }
+					{i18n.t("about.aboutthe")} {theme.appName}
 				</DialogTitle>
 				<DialogContent dividers>
-				{ currentUser?.super ? 
-          <>
-            <div>
-              <img className={classes.ticketzLogoImg} />
-            </div>
-            <Typography variant="body1" gutterBottom><b>Frontend: 
-              { frontendGitInfo.tagName && `Version: ${frontendGitInfo.tagName} Build info: ${frontendGitInfo.buildTimestamp}` }
-              { !frontendGitInfo.tagName &&
+          <div>
+            <img className={classes.logoImg} />
+          </div>
+
+          <Typography variant="body1" gutterBottom>
+            <b>Takon Sobat</b> dikembangkan oleh <b>Muhammad Lamkhil Bashor</b> dari 
+            <b> Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP) Kota Surabaya</b> 
+            sebagai aplikasi layanan masyarakat berbasis tiket dengan pendekatan percakapan digital.
+          </Typography>
+
+          <Typography variant="body1" gutterBottom>
+            Aplikasi ini dibangun di atas proyek open source 
+            <Link target="_blank" href="https://github.com/ticketz-oss/ticketz"> Ticketz</Link>, 
+            yang merupakan pengembangan lanjutan dari 
+            <Link target="_blank" href="https://github.com/canove/whaticket-community"> Whaticket</Link>.
+          </Typography>
+
+          <Typography variant="body1" gutterBottom>
+            Pengembangan <b>Takon Sobat</b> tunduk pada lisensi 
+            <Link target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.html"> GNU AGPL v3</Link>. 
+            Sesuai dengan lisensi ini, kode sumber dapat diakses dan dimodifikasi secara terbuka, 
+            selama atribusi kepada pengembang asli tetap dijaga.
+          </Typography>
+
+          <Typography variant="body1" gutterBottom>
+            Versi backend:{" "}
+            {backendGitInfo ? (
+              backendGitInfo.tagName ? (
+                `Version: ${backendGitInfo.tagName} (Build: ${backendGitInfo.buildTimestamp})`
+              ) : (
                 <>
-                  {frontendGitInfo.commitHash && `Commit: {frontendGitInfo.commitHash} `}
-                  {frontendGitInfo.branchName && `Branch: {frontendGitInfo.branchName} `}
-                  {frontendGitInfo.commitTimestamp && `Time: {frontendGitInfo.commitTimestamp} `}
+                  {backendGitInfo.commitHash && `Commit: ${backendGitInfo.commitHash} `}
+                  {backendGitInfo.branchName && `Branch: ${backendGitInfo.branchName} `}
+                  {backendGitInfo.commitTimestamp && `Time: ${backendGitInfo.commitTimestamp}`}
                 </>
-              }
-            </b>
-            {backendGitInfo &&
-            <>
-            <br /><b>Backend: 
-              { backendGitInfo.tagName && `Version: ${backendGitInfo.tagName} Build info: ${backendGitInfo.buildTimestamp}` }
-              { !backendGitInfo.tagName &&
-                <>
-                  {backendGitInfo.commitHash && `Commit: {backendGitInfo.commitHash} `}
-                  {backendGitInfo.branchName && `Branch: {backendGitInfo.branchName} `}
-                  {backendGitInfo.commitTimestamp && `Time: {backendGitInfo.commitTimestamp} `}
-                </>
-              }
-            </b>
-            </>
-            }
-            </Typography>
-            <Typography variant="body1">{i18n.t("about.aboutdetail")}</Typography>
-            <Typography><Link target="_blank" href="https://todobom.com">{i18n.t("about.aboutauthorsite")}</Link></Typography>
-            <Typography><Link target="_blank" href="https://github.com/canove/whaticket-community">{i18n.t("about.aboutwhaticketsite")}</Link></Typography>
-            <Typography><Link target="_blank" href="https://github.com/vemfazer">{i18n.t("about.aboutvemfazersite")}</Link></Typography>
-            <Typography variant="h4">{i18n.t("about.licenseheading")}</Typography>
-            <Typography variant="body1">{i18n.t("about.licensedetail")}</Typography>
-            <Typography><Link target="_blank" href="https://github.com/ticketz-oss/ticketz/blob/main/LICENSE.md">{i18n.t("about.licensefulltext")}</Link></Typography>
-            <Typography><Link target="_blank" href="https://github.com/ticketz-oss/ticketz">{i18n.t("about.licensesourcecode")}</Link></Typography>
-          </>
-          :
-          <>
-            <div>
-              <img className={classes.logoImg} />
-            </div>
-            <Typography className={classes.textCenter} ><Link target="_blank" href="https://ticke.tz">{i18n.t("about.copyright")}</Link></Typography>
-          </>
-        }
+              )
+            ) : (
+              "Memuat info versi..."
+            )}
+          </Typography>
 				</DialogContent>
 				<DialogActions>
 					<Button
@@ -152,5 +140,7 @@ const AboutModal = ({ open, onClose }) => {
 		</div>
 	);
 };
+
+
 
 export default AboutModal;
