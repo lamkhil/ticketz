@@ -8,13 +8,6 @@ import { messages as italianMessages } from "./it";
 import { messages as indonesianMessages } from "./id";
 
 const messages = {
-	...portugueseMessages,
-  ...portuguesePortugalMessages,
-	...englishMessages,
-	...spanishMessages,
-  ...frenchMessages,
-  ...germanMessages,
-  ...italianMessages,
 	...indonesianMessages,
 };
 

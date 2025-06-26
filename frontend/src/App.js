@@ -151,7 +151,7 @@ const App = () => {
   ), [appLogoLight, appLogoDark, appLogoFavicon, appName, locale, mode, primaryColorDark, primaryColorLight]);
 
   useEffect(() => {
-    const i18nlocale = localStorage.getItem("language");
+    const i18nlocale = 'id';
     if (!i18nlocale) {
       return;
     }

@@ -503,18 +503,6 @@ const LoggedInLayout = ({ children, themeToggle }) => {
               <MenuItem onClick={toggleColorMode}>
                 {theme.mode === 'dark' ? i18n.t("mainDrawer.appBar.user.lightmode") : i18n.t("mainDrawer.appBar.user.darkmode")}
               </MenuItem>
-              <NestedMenuItem
-                label={i18n.t("mainDrawer.appBar.user.language")}
-                parentMenuOpen={menuOpen}
-              >
-                {
-                  Object.keys(messages).map((m) => (
-                    <MenuItem onClick={() => handleChooseLanguage(m)}>
-                      {messages[m].translations.mainDrawer.appBar.i18n.language}
-                    </MenuItem>
-                  ))
-                }
-              </NestedMenuItem>
               <MenuItem onClick={handleOpenAboutModal}>
                 {i18n.t("about.aboutthe")} {currentUser?.super ? "Takon Sobat" : theme.appName}
               </MenuItem>
